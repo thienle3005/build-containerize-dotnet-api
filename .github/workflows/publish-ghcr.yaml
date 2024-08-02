@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v3
       - name: build and push image
         run: |
-          docker login --username thienle3005 --password ${{ serects.GHCR_PAT }} ghcr.io
+          docker login --username thienle3005 --password ${{ secrets.GHCR_PAT }} ghcr.io
           docker build . --tag ghcr.io/thienle3005/build-containerize-dotnet-api:latest
           docker push ghcr.io/thienle3005/build-containerize-dotnet-api:latest
